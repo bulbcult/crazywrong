@@ -1,0 +1,27 @@
+(base) Dingruis-MacBook-Pro:~ derren$ python3 -m pip install cfclient[qt5] pysdl2
+Requirement already satisfied: cfclient[qt5] in ./opt/anaconda3/lib/python3.7/site-packages (2020.2)
+Requirement already satisfied: pysdl2 in ./opt/anaconda3/lib/python3.7/site-packages (0.9.7)
+Requirement already satisfied: quamash==0.6.1 in ./opt/anaconda3/lib/python3.7/site-packages (from cfclient[qt5]) (0.6.1)
+Requirement already satisfied: appdirs>=1.4.0 in ./opt/anaconda3/lib/python3.7/site-packages (from cfclient[qt5]) (1.4.3)
+Requirement already satisfied: PyYAML==5.1.2 in ./opt/anaconda3/lib/python3.7/site-packages (from cfclient[qt5]) (5.1.2)
+Requirement already satisfied: qtm>=2.0.2 in ./opt/anaconda3/lib/python3.7/site-packages (from cfclient[qt5]) (2.0.5)
+Requirement already satisfied: cflib>=0.1.9 in ./opt/anaconda3/lib/python3.7/site-packages (from cfclient[qt5]) (0.1.10)
+Requirement already satisfied: pyzmq==18.1.0 in ./opt/anaconda3/lib/python3.7/site-packages (from cfclient[qt5]) (18.1.0)
+Requirement already satisfied: pyqtgraph>=0.10 in ./opt/anaconda3/lib/python3.7/site-packages (from cfclient[qt5]) (0.10.0)
+Requirement already satisfied: PyQt5==5.12.1; extra == "qt5" in ./opt/anaconda3/lib/python3.7/site-packages (from cfclient[qt5]) (5.12.1)
+Requirement already satisfied: pyusb>=1.0.0b2 in ./opt/anaconda3/lib/python3.7/site-packages (from cflib>=0.1.9->cfclient[qt5]) (1.0.2)
+Requirement already satisfied: numpy in ./opt/anaconda3/lib/python3.7/site-packages (from pyqtgraph>=0.10->cfclient[qt5]) (1.17.2)
+Requirement already satisfied: PyQt5_sip<4.20,>=4.19.14 in ./opt/anaconda3/lib/python3.7/site-packages (from PyQt5==5.12.1; extra == "qt5"->cfclient[qt5]) (4.19.19)
+(base) Dingruis-MacBook-Pro:~ derren$ python3 -m cfclient.gui
+Traceback (most recent call last):
+  File "/Users/derren/opt/anaconda3/lib/python3.7/runpy.py", line 183, in _run_module_as_main
+    mod_name, mod_spec, code = _get_module_details(mod_name, _Error)
+  File "/Users/derren/opt/anaconda3/lib/python3.7/runpy.py", line 109, in _get_module_details
+    __import__(pkg_name)
+  File "/Users/derren/opt/anaconda3/lib/python3.7/site-packages/cfclient/__init__.py", line 46, in <module>
+    VERSION = pkg_resources.require("cfclient")[0].version
+  File "/Users/derren/opt/anaconda3/lib/python3.7/site-packages/pkg_resources/__init__.py", line 900, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/Users/derren/opt/anaconda3/lib/python3.7/site-packages/pkg_resources/__init__.py", line 791, in resolve
+    raise VersionConflict(dist, req).with_context(dependent_req)
+pkg_resources.ContextualVersionConflict: (PySDL2 0.9.7 (/Users/derren/opt/anaconda3/lib/python3.7/site-packages), Requirement.parse('pysdl2==0.9.6'), {'cfclient'})
