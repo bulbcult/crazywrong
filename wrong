@@ -1,14 +1,11 @@
-(base) Dingruis-MacBook-Pro:~ derren$ python3 -m cfclient.gui
-
+objc[1520]: Class RunLoopModeTracker is implemented in both /Users/derren/opt/anaconda3/lib/python3.7/site-packages/PyQt5/Qt/lib/QtCore.framework/Versions/5/QtCore (0x102505120) and /Users/derren/opt/anaconda3/lib/libQt5Core.5.dylib (0x109a11a80). One of the two will be used. Which one is undefined.
 Traceback (most recent call last):
-  File "/Users/derren/opt/anaconda3/lib/python3.7/runpy.py", line 183, in _run_module_as_main
-    mod_name, mod_spec, code = _get_module_details(mod_name, _Error)
-  File "/Users/derren/opt/anaconda3/lib/python3.7/runpy.py", line 109, in _get_module_details
-    __import__(pkg_name)
-  File "/Users/derren/opt/anaconda3/lib/python3.7/site-packages/cfclient/__init__.py", line 46, in <module>
-    VERSION = pkg_resources.require("cfclient")[0].version
-  File "/Users/derren/opt/anaconda3/lib/python3.7/site-packages/pkg_resources/__init__.py", line 900, in require
-    needed = self.resolve(parse_requirements(requirements))
-  File "/Users/derren/opt/anaconda3/lib/python3.7/site-packages/pkg_resources/__init__.py", line 791, in resolve
-    raise VersionConflict(dist, req).with_context(dependent_req)
-pkg_resources.ContextualVersionConflict: (PySDL2 0.9.7 (/Users/derren/opt/anaconda3/lib/python3.7/site-packages), Requirement.parse('pysdl2==0.9.6'), {'cfclient'})
+File "/Users/derren/opt/anaconda3/bin/spyder", line 11, in 
+sys.exit(main())
+File "/Users/derren/opt/anaconda3/lib/python3.7/site-packages/spyder/app/start.py", line 201, in main
+from spyder.app import mainwindow
+File "/Users/derren/opt/anaconda3/lib/python3.7/site-packages/spyder/app/mainwindow.py", line 84, in 
+from qtpy import QtWebEngineWidgets # analysis:ignore
+File "/Users/derren/opt/anaconda3/lib/python3.7/site-packages/qtpy/QtWebEngineWidgets.py", line 22, in 
+from PyQt5.QtWebEngineWidgets import QWebEnginePage
+ValueError: PyCapsule_GetPointer called with incorrect name
